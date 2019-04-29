@@ -14,8 +14,16 @@ public class Main {
   }
 
   private static String processGrades(Scanner scanner) {
-
-    return null;
+    int accumulator = 0;
+    while (scanner.hasNextLine()) {
+      String line = scanner.nextLine();
+      String[] line1 = line.split("\\s+");
+      // Trying to see if withdrawn class or not
+//      if (line1.contains("W"))
+      accumulator++;
+      System.out.println(line);
+      }
+    return "Courses: " + accumulator;
   }
 
   @Test
